@@ -1,0 +1,4 @@
+Bubble Sort requires a comparison between two elements and a swap. In the worst case, descending
+  order, the algorithm is O(N^^)
+  
+Nested Loops have O(N^^) efficiency. Example on pg.53 shows a single loop, linear solution.
