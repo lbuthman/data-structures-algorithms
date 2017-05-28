@@ -2,3 +2,13 @@ Bubble Sort requires a comparison between two elements and a swap. In the worst 
   order, the algorithm is O(N^^)
   
 Nested Loops have O(N^^) efficiency. Example on pg.53 shows a single loop, linear solution.
+
+Selection Sort swaps different from Bubble Sort. During the loop, each item must be evaluated, but
+only one swap is performed per round. However, even though Selection Sort is technically faster
+with N^^/2 steps, Big O ignores Constatnts and the notation becomes O(N^^) for both.
+
+Big O is a way to classify long term growth rates. This means that, based on the current data,
+O(N^^) could outperform O(N). But, when two algorithms have the same classification like Bubble
+and Selection Sort, they can perform very differently. In this example, Selection Sort is
+faster and stays faster as data increases. Therefore, deeper analysis is required for comparing
+algorithms with the same Big O notation.
