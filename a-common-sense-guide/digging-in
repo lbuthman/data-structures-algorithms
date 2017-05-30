@@ -12,3 +12,8 @@ O(N^^) could outperform O(N). But, when two algorithms have the same classificat
 and Selection Sort, they can perform very differently. In this example, Selection Sort is
 faster and stays faster as data increases. Therefore, deeper analysis is required for comparing
 algorithms with the same Big O notation.
+
+An algorithm can be described in best, average, and worst case scenarios. In terms of sorting,
+already sorted is the best case and reverse is of course the worst, while random is average.
+One major use of this is for analyzing the algorithm to see if it exhibits different cases in
+each scenario. Some may and others may not, which can be important when selecting one.
