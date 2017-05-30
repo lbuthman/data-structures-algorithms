@@ -1,1 +1,12 @@
+Hash tables can lookup a value at O(1). They also go by hashes, maps, hashmaps, dictionaries, and
+associative arrays.
 
+The process of taking characters and converting them to numbers is hashing.
+
+Hash functions can be executed in many different ways like simply adding each number together or
+multiplying them. All in all, a hash function must return the same values given the same input.
+
+Trying to add data to a cell that is already filled is known as a collision. A classic way to handle
+collisions is with "separate chaining", where a single value in a hash map is replaced with an array.
+Because of separate chaining, our worst case scenario could be O(N) but typically a hash map will
+be O(1)
