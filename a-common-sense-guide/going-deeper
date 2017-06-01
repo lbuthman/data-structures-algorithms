@@ -10,3 +10,36 @@ Trying to add data to a cell that is already filled is known as a collision. A c
 collisions is with "separate chaining", where a single value in a hash map is replaced with an array.
 Because of separate chaining, our worst case scenario could be O(N) but typically a hash map will
 be O(1)
+
+A hash tables efficiency depends on three factors
+  1) How much data is stored.
+  2) How many cells are available.
+  3) When the hash function is used.
+  * with more data, comes more collisions which reduces efficiency
+  
+A good hash function should distribute its data across all available cells and should be an 
+appropriate size for the amount of stored data. For every 7 data elements stored in a hash table,
+it should have 10 cells. This ratio of data to cells is called the "load factor".
+
+In many cases, we can use hash tables as an alternative or replacement to a Set. When adding an item
+to a hash table, we don't need to look for duplicates like in a set because even if they exist, it will
+just overwrite the old one. This lets the Insert for hash table be O(1).
+
+In addition to efficiency, data structures can make code simpler and easier to read. Stacks and Queues
+are simply arrays with restrictions. These restrictions make them elegant and suited to handle
+temporary data. Temporary data is data that doesn't have meaning after it is processed, like a food order 
+at a restaurant.
+
+Stacks
+  - A stack is a list of elements like an array but data can only be inserted, read and removed from the end.
+  - The top of the stack is actually the end position. Items are pushed or popped in LIFO fashion.
+  - The example of a linter for opening/closing brackets demonstrates how a stack can be used to push
+  and pop items to validate syntax.
+  - Stacks are good for any data that should be handled in reverse order; recursion, undo, or function
+  calls in a network application.
+  
+Queues
+  - Queues are very similar to stacks, but differ in the order data is processed, FIFO. It lives by the
+  following restrictions: data can only be added at the end of the queue, read and removed from the front.
+  - Queues are the perfect tool for handling asynchronous requests, ensuring they are processed in the 
+  order they are received.
