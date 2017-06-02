@@ -1,1 +1,36 @@
+- Process for reading recursion code
+  1) Identify the base case
+  2) Walk through the function assuming it's the base case
+  3) Then walk through the function assuming it's the case immediately before the base case
+  4) Progress through analysis one case at a time
+  
+- As the computer evaluates recursion, it "pushes" items to the Stack to wait for the base case. Once
+the base case is reached, the temporary data in the Stack is popped LIFO, just as expected.
 
+- Recursion is great for algorithms that can't know how many levels they need to go to fulfill their
+mission.
+
+- The real world doesn't use Bubble, Selection or Insertion Sort, but instaed uses build in, faster 
+methods. One example is Quicksort which employes Recursion under the hood. Quicksort is most suited for
+average cases while performing at O(N^^) for worst cases. It relies on the concept of "partioning".
+
+- Partioning an array is to take a random value and make sure every number less than the pivot is to the
+left of the pivot and that every number greater than the pivot is to the right of the pivot.This is
+accomplished by setting the pivot, then the left and right pointer to variables.
+  1) The left pointer moves to the right until the value is >= to the pivot, and then stops.
+  2) The right pointer does the opposite.
+  3) The values at each pointer are then swapped.
+  4) Continue that process until both pointers point at the same value or the left pointer points past
+  the right pointer
+  5) Finally, we swap the pivot and the left pivor values
+  
+Quicksort
+  1) Partition the array, the pivot is now in its proper place
+  2) Treat subarrays to the left and right of the pivot as their own arrays, and call #1 and #2 recursively.
+  3) When we have a subarray with 0 or 1 elements, we have hit the base case.
+  
+- The speed of Quicksort is O(N log N) in the best and average case. The log portion comes when we break
+the array into subarrays. This can be done log N times, since our base case is 1 or 0. An array of 8
+items can be broken into 3 subarrays. For the worst case scenario, the speed is O(N^^) because many
+subarrays get created. I don't see what the big deal is about this method. It is clumsy to me and not
+efficient since it compares every item and continues to compare sorted arrays blindly.
