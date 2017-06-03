@@ -34,3 +34,16 @@ the array into subarrays. This can be done log N times, since our base case is 1
 items can be broken into 3 subarrays. For the worst case scenario, the speed is O(N^^) because many
 subarrays get created. I don't see what the big deal is about this method. It is clumsy to me and not
 efficient since it compares every item and continues to compare sorted arrays blindly.
+
+Quickselect
+  - The scenario in the book is a random array, and we want to know the 10th lowest value in the array or
+  the 5th highest. The array in the scenario is not sorted yet either.
+  - Quickselect relies on Partitioning and is similar to a hybrid of Quicksort and Binary Search. It still
+  requires the same partitioning we have seen before, but we don't have to partion the whole array this time.
+    1) Partition the array once.
+    2) The pivot is now near the middle and in a good spot.
+    3) If we want the 2nd lowest value, we can safely ignore everything in the right subarray and now just
+    partition the left subarray.
+    4) We continue dividing in half and partitioning only what's needed.
+    5) Finally we can grab the second cell once we have partioned the subarrays to that point.
+  - This still isn't that great and is O(2N) -> O(N), because we still have to compare and swap many items.
