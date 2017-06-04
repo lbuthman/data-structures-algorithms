@@ -15,4 +15,12 @@ Linked List -> a data structure representing items in a list
   - Deletion -> Just like in Insert, the best case for deletion is on the first item, taking O(1) steps. The
   average happens in the middle and the worst case is at the end since all items must be searched through to
   get to the node. This results in O(N).
-  - 
+  - Linked Lists "shine" when examining a single list and deleting many elements from it. If an array were to
+  delete 1 in 10 iteams from a 10,000 sized array, each deletion would trigger a shift of all reaming elements.
+  This would require 100,000 steps -> 100 * N. But a Linked List can just move the pointer. So even though we
+  need 1,000 reading steps, we only need 100 deleting steps, reducing the total steps to 1,100.
+  - A linked list can act as an implementation for a Queue, like we saw array do previously. However, to gain
+  any benefit over an array implementation, we need to use a special Doubly Linked List. This has each node refer
+  to the preceeding and proceeding node, or have a null pointer at the starting/ending position. Because this
+  DLL has access to both sides, insert and delete at both sides is O(1). And since the DLL can insert data at
+  the front at O(1) and delete from the end at O(1), this becomes a great implementation for a Queue.
