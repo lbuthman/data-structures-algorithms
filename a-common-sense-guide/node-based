@@ -1,1 +1,18 @@
-
+Linked List -> a data structure representing items in a list
+  - These do not consist of a continuous set of allocated memory cells but instead are not next to each other
+  in memory.
+  - Cells that are not adjacent to each other are called nodes.
+  - To know where each is stored, each node stores the memory address of the next node in the list.
+  - So to store one item in a linked list requires two cells, one for the piece of data and one for the location
+  of the next node.
+  - The benefit is that an unknown number of items can be added to the list, while an array requires allocated
+  memory upfront and must be moved to a new block if resized.
+  - Reading and Searching -> O(N)
+  - Inserting -> in contrast to an array, position 1 insert is O(1) since the Linked List can just point to the
+  start of the previous list. Bus if the insert happens inside the list, it needs to Search for the correct
+  node first, which takes O(N) steps. This is the same for inserting into the middle of an array. Therefore,
+  best and worst case scenarios for Insert are opposite each other for Linked List and Arrays.
+  - Deletion -> Just like in Insert, the best case for deletion is on the first item, taking O(1) steps. The
+  average happens in the middle and the worst case is at the end since all items must be searched through to
+  get to the node. This results in O(N).
+  - 
