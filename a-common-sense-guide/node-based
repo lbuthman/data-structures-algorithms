@@ -1,4 +1,5 @@
 Linked List -> a data structure representing items in a list
+
   - These do not consist of a continuous set of allocated memory cells but instead are not next to each other
   in memory.
   - Cells that are not adjacent to each other are called nodes.
@@ -24,3 +25,18 @@ Linked List -> a data structure representing items in a list
   to the preceeding and proceeding node, or have a null pointer at the starting/ending position. Because this
   DLL has access to both sides, insert and delete at both sides is O(1). And since the DLL can insert data at
   the front at O(1) and delete from the end at O(1), this becomes a great implementation for a Queue.
+
+Binary Trees -> fast search, insert, and delete while maintaining order
+
+  - With binary search, sorted arrays are O(log N) to search, but still suffer slow insert and delete times. Hash
+  Tables are O(1) for search, insert, and delete but do not maintain order. Binary trees do it all.
+  - Similar to Linked Lists, each item in the tree references two other nodes, or one to two null pointers
+  - Trees have a "root" and "levels" and many types of tree structures.
+  - A Binary Tree abides by the following rules
+    1) Each node has either zero, one, or two children.
+    2) If a node has two children, it must have one child that has a lesser value and one with a higher value.
+  - Seach is O(log N) since each search eliminates half the remaining values.
+  - Insertion always takes O(log N) search steps plus one more for the insertion operation, which is still
+  O(log N).
+  
+  
