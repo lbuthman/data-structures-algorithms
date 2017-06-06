@@ -38,5 +38,15 @@ Binary Trees -> fast search, insert, and delete while maintaining order
   - Seach is O(log N) since each search eliminates half the remaining values.
   - Insertion always takes O(log N) search steps plus one more for the insertion operation, which is still
   O(log N).
-  
-  
+  - If creating a tree from a sorted list, our tree will be completely imbalanced and lose all of its efficiency.
+  Therefore, to convert an ordered array to a Binary Tree, the data should be randomized for insertion.
+  - Deleting can be more complicated, even though the speed will still be O(log N).
+    * If the node to be deleted has no children, then just delete it.
+    * If it has one child, replace the node with the deleted node.
+    * When deleting a node with two children, replace the node with the "successor" node. The successor is found
+    by taking the right node of the deleted node and looking for the last left child node in the sequence.
+    * If the successor node has a right child, this child will be left behind. To avoid this, make it the left
+    child of the successor's parent.
+    
+- The process of visiting every node in a data structure is known as "traversing" An "in order traversal" visits
+every node in order.
