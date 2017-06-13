@@ -1,1 +1,7 @@
+- Time complexity -> how fast an algorithm run
+- Space complexity -> how much memory an algorithm consumes
 
+- The example of coying an array from an old array is O(N). Then we see the array elements processed and
+put back in the original array which is O(1) since no additional memory is used.
+
+- Sometimes in the wild, you will see input memory factored into space complexity, fyi.
